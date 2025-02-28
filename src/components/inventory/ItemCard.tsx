@@ -53,7 +53,9 @@ const ItemCard = ({
     >
       {/* Item Image */}
       <div className="relative h-40 bg-gray-200">
-        <img src={image} alt={name} className="w-full h-full object-cover" />
+        <div>
+          <img src={image} alt={name} className="w-full h-full object-cover" />
+        </div>
 
         {/* Status Badge */}
         <div className="absolute top-2 right-2">
@@ -93,7 +95,6 @@ const ItemCard = ({
           </div>
         )}
       </div>
-
       {/* Item Details */}
       <div className="p-4 flex-grow flex flex-col">
         <div className="flex justify-between items-start mb-2">
@@ -128,7 +129,6 @@ const ItemCard = ({
           <span className="font-medium">Quantity:</span> {quantity} units
         </div>
       </div>
-
       {/* Action Footer */}
       <div className="px-4 py-3 bg-gray-50 border-t border-gray-100">
         <Button
