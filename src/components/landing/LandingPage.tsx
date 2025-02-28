@@ -36,7 +36,6 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
-
       {/* Features Section */}
       <div className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -84,7 +83,6 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="bg-gray-50 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -111,7 +109,6 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
-
       {/* Footer */}
       <footer className="bg-gray-800 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

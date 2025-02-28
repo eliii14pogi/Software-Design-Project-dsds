@@ -185,7 +185,6 @@ const FilterSidebar = ({
           </Button>
         </div>
       </div>
-
       {/* Search */}
       <div className="mb-6">
         <div className="relative">
@@ -201,7 +200,6 @@ const FilterSidebar = ({
           />
         </div>
       </div>
-
       {/* Filter Sections */}
       <Accordion
         type="multiple"
@@ -237,7 +235,6 @@ const FilterSidebar = ({
             </div>
           </AccordionContent>
         </AccordionItem>
-
         {/* Availability */}
         <AccordionItem value="availability" className="border-none">
           <AccordionTrigger className="py-2 px-1 hover:no-underline">
@@ -263,30 +260,7 @@ const FilterSidebar = ({
             </div>
           </AccordionContent>
         </AccordionItem>
-
         {/* Price Range */}
-        <AccordionItem value="price" className="border-none">
-          <AccordionTrigger className="py-2 px-1 hover:no-underline">
-            <span className="text-sm font-medium">Price Range</span>
-          </AccordionTrigger>
-          <AccordionContent>
-            <div className="pt-4 px-1">
-              <Slider
-                defaultValue={[0, 1000]}
-                max={1000}
-                step={10}
-                value={[filters.priceRange[0], filters.priceRange[1]]}
-                onValueChange={handlePriceRangeChange}
-                className="mb-6"
-              />
-              <div className="flex items-center justify-between">
-                <span className="text-sm">${filters.priceRange[0]}</span>
-                <span className="text-sm">${filters.priceRange[1]}</span>
-              </div>
-            </div>
-          </AccordionContent>
-        </AccordionItem>
-
         {/* Hazard Levels (only for chemicals) */}
         {categoryType === "chemicals" && (
           <AccordionItem value="hazard" className="border-none">
@@ -325,34 +299,8 @@ const FilterSidebar = ({
             </AccordionContent>
           </AccordionItem>
         )}
-
         {/* Locations */}
-        <AccordionItem value="locations" className="border-none">
-          <AccordionTrigger className="py-2 px-1 hover:no-underline">
-            <span className="text-sm font-medium">Locations</span>
-          </AccordionTrigger>
-          <AccordionContent>
-            <div className="space-y-2 pt-1">
-              {locations.map((location) => (
-                <div key={location} className="flex items-center space-x-2">
-                  <Checkbox
-                    id={`location-${location}`}
-                    checked={filters.locations.includes(location)}
-                    onCheckedChange={() => handleLocationToggle(location)}
-                  />
-                  <label
-                    htmlFor={`location-${location}`}
-                    className="text-sm cursor-pointer"
-                  >
-                    {location}
-                  </label>
-                </div>
-              ))}
-            </div>
-          </AccordionContent>
-        </AccordionItem>
       </Accordion>
-
       {/* Applied Filters */}
       {(filters.categories.length > 0 ||
         filters.hazardLevels.length > 0 ||
